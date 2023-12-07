@@ -1,5 +1,6 @@
 import socket
 import upnpclient
+import time
 from fastapi import FastAPI
 
 app = FastAPI()
@@ -25,7 +26,7 @@ def send_command_to_box(command, ip):
 @app.get("/all_is_bright")
 @app.post("/all_is_bright")
 def all_is_bright():
-    print("Starting up.")
+    print(f"Starting up. {time.strftime('%Y-%m-%d %H:%M:%S')}")
 
     cnt = 0
     show_box = None
