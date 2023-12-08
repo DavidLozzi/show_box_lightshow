@@ -15,3 +15,12 @@ Use `tail output.log` to monitor log.
 Run `ps -ef | grep <svc name>` to view running processes
 
 Run `kill 1234` to kill a process
+
+**restarting start up service systemd**
+
+```sh
+sudo systemctl daemon-reload
+sudo systemctl restart showbox.service
+```
+
+`sudo systemctl status showbox.service`
