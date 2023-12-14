@@ -30,6 +30,7 @@ def all_is_bright(payload: dict):
     amount = 0
     volume = 0
     intent = ""
+    return_message = "The magic is on!"
     if payload["request"]["type"] == "IntentRequest":
         intent = payload["request"]["intent"]["name"]
         if "slots" in payload["request"]["intent"]:
@@ -96,13 +97,16 @@ def all_is_bright(payload: dict):
             Channel="Master",
             DesiredVolume=new_volume,
         )
+        return_message = f"Volume set to {new_volume}"
     elif intent == "PauseMusic":
         av_transport.Pause(InstanceID=0)
         print("Paused music")
+        return_message = "Music paused"
     elif intent == "PlayMusic":
         play_queue.CreateQueue(QueueContext=queue)
         play_queue.PlayQueueWithIndex(QueueName="iHeartRadio", Index=1)
         print("Play music")
+        return_message = "Playing music"
     else:
         print("Turning box on")
         send_command_to_box("FFAA MODE START BB", ip)
@@ -124,7 +128,7 @@ def all_is_bright(payload: dict):
         "response": {
             "outputSpeech": {
                 "type": "PlainText",
-                "text": "The magic is on!",
+                "text": return_message,
                 "playBehavior": "REPLACE_ENQUEUED",
             },
             "shouldEndSession": True,
