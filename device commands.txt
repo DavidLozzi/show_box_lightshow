@@ -1,0 +1,341 @@
+Device: Show_Box_9E54 at http://192.168.1.206:49152/description.xml
+Service: urn:schemas-upnp-org:service:AVTransport:1
+  Action: GetCurrentTransportActions
+    Arguments:
+      IN - InstanceID: {'name': 'A_ARG_TYPE_InstanceID', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      OUT - Actions: {'name': 'CurrentTransportActions', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+
+  Action: GetDeviceCapabilities
+    Arguments:
+      IN - InstanceID: {'name': 'A_ARG_TYPE_InstanceID', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      OUT - PlayMedia: {'name': 'PossiblePlaybackStorageMedia', 'datatype': 'string', 'allowed_values': {'NETWORK', 'NONE', 'HDD', 'CD-DA', 'DVD-VIDEO', 'UNKNOWN'}, 'send_events': False}
+      OUT - RecMedia: {'name': 'PossibleRecordStorageMedia', 'datatype': 'string', 'allowed_values': {'NOT_IMPLEMENTED'}, 'send_events': False}
+      OUT - RecQualityModes: {'name': 'PossibleRecordQualityModes', 'datatype': 'string', 'allowed_values': {'NOT_IMPLEMENTED'}, 'send_events': False}
+
+  Action: GetMediaInfo
+    Arguments:
+      IN - InstanceID: {'name': 'A_ARG_TYPE_InstanceID', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      OUT - NrTracks: {'name': 'NumberOfTracks', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      OUT - MediaDuration: {'name': 'CurrentMediaDuration', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      OUT - CurrentURI: {'name': 'AVTransportURI', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      OUT - CurrentURIMetaData: {'name': 'AVTransportURIMetaData', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      OUT - NextURI: {'name': 'NextAVTransportURI', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      OUT - NextURIMetaData: {'name': 'NextAVTransportURIMetaData', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      OUT - TrackSource: {'name': 'TrackSource', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      OUT - PlayMedium: {'name': 'PlaybackStorageMedium', 'datatype': 'string', 'allowed_values': {'NETWORK', 'NONE', 'HDD', 'CD-DA', 'DVD-VIDEO', 'UNKNOWN'}, 'send_events': False}
+      OUT - RecordMedium: {'name': 'RecordStorageMedium', 'datatype': 'string', 'allowed_values': {'NOT_IMPLEMENTED'}, 'send_events': False}
+      OUT - WriteStatus: {'name': 'RecordMediumWriteStatus', 'datatype': 'string', 'allowed_values': {'NOT_IMPLEMENTED'}, 'send_events': False}
+
+  Action: GetPositionInfo
+    Arguments:
+      IN - InstanceID: {'name': 'A_ARG_TYPE_InstanceID', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      OUT - Track: {'name': 'CurrentTrack', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      OUT - TrackDuration: {'name': 'CurrentTrackDuration', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      OUT - TrackMetaData: {'name': 'CurrentTrackMetaData', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      OUT - TrackURI: {'name': 'CurrentTrackURI', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      OUT - RelTime: {'name': 'RelativeTimePosition', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      OUT - AbsTime: {'name': 'AbsoluteTimePosition', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      OUT - RelCount: {'name': 'RelativeCounterPosition', 'datatype': 'i4', 'allowed_values': set(), 'send_events': False}
+      OUT - AbsCount: {'name': 'AbsoluteCounterPosition', 'datatype': 'i4', 'allowed_values': set(), 'send_events': False}
+
+  Action: GetTransportInfo
+    Arguments:
+      IN - InstanceID: {'name': 'A_ARG_TYPE_InstanceID', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      OUT - CurrentTransportState: {'name': 'TransportState', 'datatype': 'string', 'allowed_values': {'PAUSED_PLAYBACK', 'TRANSITIONING', 'NO_MEDIA_PRESENT', 'STOPPED', 'PLAYING'}, 'send_events': False}
+      OUT - CurrentTransportStatus: {'name': 'TransportStatus', 'datatype': 'string', 'allowed_values': {'ERROR_OCCURRED', 'OK'}, 'send_events': False}
+      OUT - CurrentSpeed: {'name': 'TransportPlaySpeed', 'datatype': 'string', 'allowed_values': {'1'}, 'send_events': False}
+
+  Action: GetTransportSettings
+    Arguments:
+      IN - InstanceID: {'name': 'A_ARG_TYPE_InstanceID', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      OUT - PlayMode: {'name': 'CurrentPlayMode', 'datatype': 'string', 'allowed_values': {'REPEAT_ALL', 'REPEAT_TRACK', 'NORMAL'}, 'send_events': False}
+      OUT - RecQualityMode: {'name': 'CurrentRecordQualityMode', 'datatype': 'string', 'allowed_values': {'NOT_IMPLEMENTED'}, 'send_events': False}
+
+  Action: Next
+    Arguments:
+      IN - InstanceID: {'name': 'A_ARG_TYPE_InstanceID', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+
+  Action: Pause
+    Arguments:
+      IN - InstanceID: {'name': 'A_ARG_TYPE_InstanceID', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+
+  Action: Play
+    Arguments:
+      IN - InstanceID: {'name': 'A_ARG_TYPE_InstanceID', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      IN - Speed: {'name': 'TransportPlaySpeed', 'datatype': 'string', 'allowed_values': {'1'}, 'send_events': False}
+
+  Action: Previous
+    Arguments:
+      IN - InstanceID: {'name': 'A_ARG_TYPE_InstanceID', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+
+  Action: Seek
+    Arguments:
+      IN - InstanceID: {'name': 'A_ARG_TYPE_InstanceID', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      IN - Unit: {'name': 'A_ARG_TYPE_SeekMode', 'datatype': 'string', 'allowed_values': {'TRACK_NR', 'REL_TIME'}, 'send_events': False}
+      IN - Target: {'name': 'A_ARG_TYPE_SeekTarget', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+
+  Action: SetAVTransportURI
+    Arguments:
+      IN - InstanceID: {'name': 'A_ARG_TYPE_InstanceID', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      IN - CurrentURI: {'name': 'AVTransportURI', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      IN - CurrentURIMetaData: {'name': 'AVTransportURIMetaData', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+
+  Action: Stop
+    Arguments:
+      IN - InstanceID: {'name': 'A_ARG_TYPE_InstanceID', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+
+  Action: GetPlayType
+    Arguments:
+      IN - InstanceID: {'name': 'A_ARG_TYPE_InstanceID', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      OUT - PlayType: {'name': 'PlayType', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+
+  Action: GetInfoEx
+    Arguments:
+      IN - InstanceID: {'name': 'A_ARG_TYPE_InstanceID', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      OUT - CurrentTransportState: {'name': 'TransportState', 'datatype': 'string', 'allowed_values': {'PAUSED_PLAYBACK', 'TRANSITIONING', 'NO_MEDIA_PRESENT', 'STOPPED', 'PLAYING'}, 'send_events': False}
+      OUT - CurrentTransportStatus: {'name': 'TransportStatus', 'datatype': 'string', 'allowed_values': {'ERROR_OCCURRED', 'OK'}, 'send_events': False}
+      OUT - CurrentSpeed: {'name': 'TransportPlaySpeed', 'datatype': 'string', 'allowed_values': {'1'}, 'send_events': False}
+      OUT - Track: {'name': 'CurrentTrack', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      OUT - TrackDuration: {'name': 'CurrentTrackDuration', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      OUT - TrackMetaData: {'name': 'CurrentTrackMetaData', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      OUT - TrackURI: {'name': 'CurrentTrackURI', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      OUT - RelTime: {'name': 'RelativeTimePosition', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      OUT - AbsTime: {'name': 'AbsoluteTimePosition', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      OUT - RelCount: {'name': 'RelativeCounterPosition', 'datatype': 'i4', 'allowed_values': set(), 'send_events': False}
+      OUT - AbsCount: {'name': 'AbsoluteCounterPosition', 'datatype': 'i4', 'allowed_values': set(), 'send_events': False}
+      OUT - LoopMode: {'name': 'LoopMode', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      OUT - CurrentVolume: {'name': 'CurrentVolume', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      OUT - CurrentChannel: {'name': 'CurrentVolume', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      OUT - SlaveList: {'name': 'SlaveList', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      OUT - PlayMedium: {'name': 'PlaybackStorageMedium', 'datatype': 'string', 'allowed_values': {'NETWORK', 'NONE', 'HDD', 'CD-DA', 'DVD-VIDEO', 'UNKNOWN'}, 'send_events': False}
+      OUT - TrackSource: {'name': 'TrackSource', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      OUT - InternetAccess: {'name': 'InternetAccess', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      OUT - VerUpdateFlag: {'name': 'VerUpdateFlag', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      OUT - VerUpdateStatus: {'name': 'VerUpdateStatus', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      OUT - BatteryFlag: {'name': 'BatteryFlag', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      OUT - BatteryPercent: {'name': 'BatteryPercent', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      OUT - AlarmFlag: {'name': 'AlarmFlag', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+
+  Action: SetPlayMode
+    Arguments:
+      IN - InstanceID: {'name': 'A_ARG_TYPE_InstanceID', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      IN - NewPlayMode: {'name': 'CurrentPlayMode', 'datatype': 'string', 'allowed_values': {'REPEAT_ALL', 'REPEAT_TRACK', 'NORMAL'}, 'send_events': False}
+
+Service: urn:schemas-upnp-org:service:ConnectionManager:1
+  Action: GetCurrentConnectionIDs
+    Arguments:
+      OUT - ConnectionIDs: {'name': 'CurrentConnectionIDs', 'datatype': 'string', 'allowed_values': set(), 'send_events': True}
+
+  Action: GetCurrentConnectionInfo
+    Arguments:
+      IN - ConnectionID: {'name': 'A_ARG_TYPE_ConnectionID', 'datatype': 'i4', 'allowed_values': set(), 'send_events': False}
+      OUT - RcsID: {'name': 'A_ARG_TYPE_RcsID', 'datatype': 'i4', 'allowed_values': set(), 'send_events': False}
+      OUT - AVTransportID: {'name': 'A_ARG_TYPE_AVTransportID', 'datatype': 'i4', 'allowed_values': set(), 'send_events': False}
+      OUT - ProtocolInfo: {'name': 'A_ARG_TYPE_ProtocolInfo', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      OUT - PeerConnectionManager: {'name': 'A_ARG_TYPE_ConnectionManager', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      OUT - PeerConnectionID: {'name': 'A_ARG_TYPE_ConnectionID', 'datatype': 'i4', 'allowed_values': set(), 'send_events': False}
+      OUT - Direction: {'name': 'A_ARG_TYPE_Direction', 'datatype': 'string', 'allowed_values': {'Input', 'Output'}, 'send_events': False}
+      OUT - Status: {'name': 'A_ARG_TYPE_ConnectionStatus', 'datatype': 'string', 'allowed_values': {'UnreliableChannel', 'OK', 'ContentFormatMismatch', 'Unknown', 'InsufficientBandwidth'}, 'send_events': False}
+
+  Action: GetProtocolInfo
+    Arguments:
+      OUT - Source: {'name': 'SourceProtocolInfo', 'datatype': 'string', 'allowed_values': set(), 'send_events': True}
+      OUT - Sink: {'name': 'SinkProtocolInfo', 'datatype': 'string', 'allowed_values': set(), 'send_events': True}
+
+Service: urn:schemas-upnp-org:service:RenderingControl:1
+  Action: GetMute
+    Arguments:
+      IN - InstanceID: {'name': 'A_ARG_TYPE_InstanceID', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      IN - Channel: {'name': 'A_ARG_TYPE_Channel', 'datatype': 'string', 'allowed_values': {'Single', 'Master'}, 'send_events': False}
+      OUT - CurrentMute: {'name': 'Mute', 'datatype': 'boolean', 'allowed_values': set(), 'send_events': False}
+
+  Action: GetVolume
+    Arguments:
+      IN - InstanceID: {'name': 'A_ARG_TYPE_InstanceID', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      IN - Channel: {'name': 'A_ARG_TYPE_Channel', 'datatype': 'string', 'allowed_values': {'Single', 'Master'}, 'send_events': False}
+      OUT - CurrentVolume: {'name': 'Volume', 'datatype': 'ui2', 'allowed_values': set(), 'send_events': False}
+
+  Action: GetChannel
+    Arguments:
+      IN - InstanceID: {'name': 'A_ARG_TYPE_InstanceID', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      IN - Channel: {'name': 'A_ARG_TYPE_Channel', 'datatype': 'string', 'allowed_values': {'Single', 'Master'}, 'send_events': False}
+      OUT - CurrentChannel: {'name': 'Channel', 'datatype': 'ui2', 'allowed_values': set(), 'send_events': False}
+
+  Action: GetEqualizer
+    Arguments:
+      IN - InstanceID: {'name': 'A_ARG_TYPE_InstanceID', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      IN - Channel: {'name': 'A_ARG_TYPE_Channel', 'datatype': 'string', 'allowed_values': {'Single', 'Master'}, 'send_events': False}
+      OUT - CurrentEqualizer: {'name': 'Equalizer', 'datatype': 'ui2', 'allowed_values': set(), 'send_events': False}
+
+  Action: ListPresets
+    Arguments:
+      IN - InstanceID: {'name': 'A_ARG_TYPE_InstanceID', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      OUT - CurrentPresetNameList: {'name': 'PresetNameList', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+
+  Action: SelectPreset
+    Arguments:
+      IN - InstanceID: {'name': 'A_ARG_TYPE_InstanceID', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      IN - PresetName: {'name': 'A_ARG_TYPE_PresetName', 'datatype': 'string', 'allowed_values': {'InstallationDefaults', 'FactoryDefaults'}, 'send_events': False}
+
+  Action: SetMute
+    Arguments:
+      IN - InstanceID: {'name': 'A_ARG_TYPE_InstanceID', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      IN - Channel: {'name': 'A_ARG_TYPE_Channel', 'datatype': 'string', 'allowed_values': {'Single', 'Master'}, 'send_events': False}
+      IN - DesiredMute: {'name': 'Mute', 'datatype': 'boolean', 'allowed_values': set(), 'send_events': False}
+
+  Action: SetVolume
+    Arguments:
+      IN - InstanceID: {'name': 'A_ARG_TYPE_InstanceID', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      IN - Channel: {'name': 'A_ARG_TYPE_Channel', 'datatype': 'string', 'allowed_values': {'Single', 'Master'}, 'send_events': False}
+      IN - DesiredVolume: {'name': 'Volume', 'datatype': 'ui2', 'allowed_values': set(), 'send_events': False}
+
+  Action: SetChannel
+    Arguments:
+      IN - InstanceID: {'name': 'A_ARG_TYPE_InstanceID', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      IN - Channel: {'name': 'A_ARG_TYPE_Channel', 'datatype': 'string', 'allowed_values': {'Single', 'Master'}, 'send_events': False}
+      IN - DesiredChannel: {'name': 'Channel', 'datatype': 'ui2', 'allowed_values': set(), 'send_events': False}
+
+  Action: SetEqualizer
+    Arguments:
+      IN - InstanceID: {'name': 'A_ARG_TYPE_InstanceID', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      IN - Channel: {'name': 'A_ARG_TYPE_Channel', 'datatype': 'string', 'allowed_values': {'Single', 'Master'}, 'send_events': False}
+      IN - DesiredEqualizer: {'name': 'Equalizer', 'datatype': 'ui2', 'allowed_values': set(), 'send_events': False}
+
+  Action: GetControlDeviceInfo
+    Arguments:
+      IN - InstanceID: {'name': 'A_ARG_TYPE_InstanceID', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      OUT - MultiType: {'name': 'MultiRoomType', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      OUT - Router: {'name': 'Router', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      OUT - Ssid: {'name': 'Ssid', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      OUT - SlaveMask: {'name': 'SlaveMask', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      OUT - CurrentVolume: {'name': 'Volume', 'datatype': 'ui2', 'allowed_values': set(), 'send_events': False}
+      OUT - CurrentMute: {'name': 'Mute', 'datatype': 'boolean', 'allowed_values': set(), 'send_events': False}
+      OUT - CurrentChannel: {'name': 'Channel', 'datatype': 'ui2', 'allowed_values': set(), 'send_events': False}
+      OUT - SlaveList: {'name': 'SlaveList', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      OUT - Status: {'name': 'Status', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+
+  Action: MultiPlaySlaveMask
+    Arguments:
+      IN - InstanceID: {'name': 'A_ARG_TYPE_InstanceID', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      IN - SlaveMask: {'name': 'SlaveMask', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+
+  Action: SetAlarmQueue
+    Arguments:
+      IN - AlarmContext: {'name': 'AlarmContext', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+
+  Action: GetAlarmQueue
+    Arguments:
+      IN - AlarmName: {'name': 'AlarmName', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      OUT - AlarmContext: {'name': 'AlarmContext', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+
+  Action: DeleteAlarmQueue
+    Arguments:
+      IN - AlarmName: {'name': 'AlarmName', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+
+Service: urn:schemas-wiimu-com:service:PlayQueue:1
+  Action: CreateQueue
+    Arguments:
+      IN - QueueContext: {'name': 'QueueContext', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+
+  Action: ReplaceQueue
+    Arguments:
+      IN - QueueContext: {'name': 'QueueContext', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+
+  Action: DeleteQueue
+    Arguments:
+      IN - QueueName: {'name': 'QueueName', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+
+  Action: BackUpQueue
+    Arguments:
+      IN - QueueContext: {'name': 'QueueContext', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+
+  Action: AppendQueue
+    Arguments:
+      IN - QueueContext: {'name': 'QueueContext', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+
+  Action: BrowseQueue
+    Arguments:
+      IN - QueueName: {'name': 'QueueName', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      OUT - QueueContext: {'name': 'QueueContext', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+
+  Action: SetQueueLoopMode
+    Arguments:
+      IN - LoopMode: {'name': 'LoopMode', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+
+  Action: GetQueueLoopMode
+    Arguments:
+      OUT - LoopMode: {'name': 'LoopMode', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+
+  Action: SetQueuePolicy
+    Arguments:
+      IN - QueueName: {'name': 'QueueName', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+
+  Action: PlayQueueWithIndex
+    Arguments:
+      IN - QueueName: {'name': 'QueueName', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      IN - Index: {'name': 'CurrentIndex', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+
+  Action: AppendTracksInQueue
+    Arguments:
+      IN - QueueContext: {'name': 'QueueContext', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+
+  Action: RemoveTracksInQueue
+    Arguments:
+      IN - QueueName: {'name': 'QueueContext', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      IN - RangStart: {'name': 'CurrentIndex', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      IN - RangEnd: {'name': 'CurrentIndex', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+
+  Action: AppendTracksInQueueEx
+    Arguments:
+      IN - QueueContext: {'name': 'QueueContext', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      IN - Direction: {'name': 'CurrentIndex', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      IN - StartIndex: {'name': 'CurrentIndex', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+
+  Action: SetKeyMapping
+    Arguments:
+      IN - QueueContext: {'name': 'QueueContext', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+
+  Action: GetKeyMapping
+    Arguments:
+      OUT - QueueContext: {'name': 'QueueContext', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+
+  Action: GetQueueOnline
+    Arguments:
+      IN - QueueName: {'name': 'QueueName', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      IN - QueueID: {'name': 'QueueID', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      IN - QueueType: {'name': 'QueueType', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      IN - Queuelimit: {'name': 'CurrentIndex', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      IN - QueueAutoInsert: {'name': 'QueueAutoInsert', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      OUT - QueueContext: {'name': 'QueueContext', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+
+  Action: SearchQueueOnline
+    Arguments:
+      IN - QueueName: {'name': 'QueueName', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      IN - SearchKey: {'name': 'QueueID', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      IN - Queuelimit: {'name': 'CurrentIndex', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+      OUT - QueueContext: {'name': 'QueueContext', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+
+  Action: SetQueueRecord
+    Arguments:
+      IN - QueueName: {'name': 'QueueName', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      IN - QueueID: {'name': 'QueueID', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      IN - Action: {'name': 'QueueType', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+
+  Action: SetSongsRecord
+    Arguments:
+      IN - QueueName: {'name': 'QueueName', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      IN - SongID: {'name': 'QueueID', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      IN - Action: {'name': 'QueueType', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+
+  Action: UserRegister
+    Arguments:
+      IN - QueueName: {'name': 'QueueName', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      IN - UserName: {'name': 'QueueID', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      IN - PassWord: {'name': 'QueueType', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      OUT - Result: {'name': 'Result', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+
+  Action: GetQueueIndex
+    Arguments:
+      IN - QueueName: {'name': 'QueueName', 'datatype': 'string', 'allowed_values': set(), 'send_events': False}
+      OUT - CurrentIndex: {'name': 'CurrentIndex', 'datatype': 'ui4', 'allowed_values': set(), 'send_events': False}
+
