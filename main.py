@@ -137,12 +137,22 @@ def all_is_bright(payload: dict):
         }
     except Exception as e:
         print(e)
+        error_messages = [
+            "He's a south pole elf",
+            "Bah, humbug",
+            "You're a mean one, Mr. Grinch",
+            "You'll shoot your eye out, kid",
+            "Merry Christmas, ya filthy animal",
+            "You smell like beef and cheese",
+            "You're an idiot, Charlie Brown",
+            "Good afternoon",
+        ]
         return {
             "version": "1.0",
             "response": {
                 "outputSpeech": {
                     "type": "PlainText",
-                    "text": "He's a south pole elf.",
+                    "text": error_messages[int(time.time()) % len(error_messages)],
                     "playBehavior": "REPLACE_ENQUEUED",
                 },
                 "shouldEndSession": True,
